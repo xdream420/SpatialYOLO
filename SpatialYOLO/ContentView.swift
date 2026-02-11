@@ -17,7 +17,12 @@ struct ContentView: View {
             Model3D(named: "Scene", bundle: realityKitContentBundle)
                 .padding(.bottom, 50)
 
-            Text("Hello, world!")
+            Text("SpatialYOLO")
+                .font(.title)
+            
+            Text("实时物体检测")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
 
             ToggleImmersiveSpaceButton(appModel: appModel)
         }
