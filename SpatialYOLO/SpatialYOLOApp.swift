@@ -20,7 +20,21 @@ struct SpatialYOLOApp: App {
                     .tabItem {
                         Label("识别", systemImage: "sparkle.magnifyingglass")
                     }
+                    .tag(0)
+                    .environment(appModel)
+                
+                GeminiLiveView(appModel: appModel)
+                    .tabItem {
+                        Label("Gemini Live", systemImage: "wand.and.stars")
+                    }
                     .tag(1)
+                    .environment(appModel)
+                
+                SpeechToTextView()
+                    .tabItem {
+                        Label("语音转文字", systemImage: "waveform")
+                    }
+                    .tag(2)
                     .environment(appModel)
 
             }
